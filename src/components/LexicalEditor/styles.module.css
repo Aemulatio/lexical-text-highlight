@@ -1,0 +1,43 @@
+.editorInput {
+  min-height: 150px;
+  min-width: 300px;
+  resize: none;
+  font-size: 15px;
+  color: #000;
+  position: relative;
+  tab-size: 1;
+  outline: 0;
+  padding: 15px 10px;
+  caret-color: #444;
+}
+
+li:has(ul)::marker {
+  content: none;
+  display: none;
+}
+
+li:has(ol)::marker {
+  content: none;
+  display: none;
+}
+
+.editorInner {
+  text-align: left;
+  position: relative;
+}
+
+.divider {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.toolbar {
+  padding-top: 10px;
+}

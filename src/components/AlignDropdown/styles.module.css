@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  gap: var(--offset-xxs);
+  display: flex;
+  align-items: center;
+}
+
+.add {
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+}
