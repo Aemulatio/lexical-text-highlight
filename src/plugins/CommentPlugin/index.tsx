@@ -746,6 +746,7 @@ export default function CommentPlugin({
                 const {markedComment, index} = deletionInfo;
                 commentStore.addComment(markedComment, thread, index);
             } else {
+                console.log("delete thread")
                 commentStore.deleteCommentOrThread(comment);
                 // Remove ids from associated marks
                 const id = thread !== undefined ? thread.id : comment.id;
@@ -760,6 +761,7 @@ export default function CommentPlugin({
                                     node.deleteID(id);
                                     if (node.getIDs().length === 0) {
                                         $unwrapMarkNode(node);
+                                        console.log('node: ', node)
                                     }
                                 }
                             }

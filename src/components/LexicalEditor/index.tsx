@@ -26,6 +26,8 @@ import UndoButton from "../UndoButton";
 import s from "./styles.module.css";
 import {Highlighte} from "../Highlighte";
 import CommentPlugin from "../../plugins/CommentPlugin";
+import {GetState} from "../GetState.tsx";
+import {ReviewPlugin} from "../../plugins/ReviewPlugin";
 
 const isEditable = true;
 
@@ -78,6 +80,7 @@ export const LexicalEditor = () => {
                     </Radio.Group>
                     <Divider className={s.divider} type="vertical"/>
                     <Highlighte/>
+                    <GetState/>
                 </ToolbarPlugin>
             </div>
             <div className={s.editorInner}>
@@ -93,6 +96,7 @@ export const LexicalEditor = () => {
                 <CommentPlugin
                     providerFactory={undefined}
                 />
+                {/*<ReviewPlugin/>*/}
             </div>
         </div>
     );

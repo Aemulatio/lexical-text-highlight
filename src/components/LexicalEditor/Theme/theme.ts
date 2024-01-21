@@ -1,4 +1,7 @@
+import "./theme.css"
+
 const exampleTheme = {
+  review: 'review',
   ltr: "ltr",
   rtl: "rtl",
   placeholder: "editor-placeholder",
