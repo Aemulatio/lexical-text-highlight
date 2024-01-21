@@ -1,4 +1,4 @@
-import {useEffect, useId, useRef} from "react";
+import {useEffect, useId} from "react";
 import {useLexicalComposerContext} from "@lexical/react/LexicalComposerContext";
 import {ContentEditable} from "@lexical/react/LexicalContentEditable";
 import LexicalErrorBoundary from "@lexical/react/LexicalErrorBoundary";
@@ -25,6 +25,7 @@ import UndoButton from "../UndoButton";
 
 import s from "./styles.module.css";
 import {Highlighte} from "../Highlighte";
+import CommentPlugin from "../../plugins/CommentPlugin";
 
 const isEditable = true;
 
@@ -89,6 +90,9 @@ export const LexicalEditor = () => {
                 <ListPlugin/>
                 <LinkPlugin/>
                 <DraggableBlockPlugin/>
+                <CommentPlugin
+                    providerFactory={undefined}
+                />
             </div>
         </div>
     );
