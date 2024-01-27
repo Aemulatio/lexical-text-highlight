@@ -12,7 +12,7 @@ const onError = (error: any) => {
 
 const initialConfig = {
   namespace: "MyEditor",
-  exampleTheme,
+  theme: exampleTheme,
   onError,
   nodes: [...PlaygroundNodes],
 };

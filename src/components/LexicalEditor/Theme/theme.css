@@ -90,3 +90,7 @@ h1 {
   display: inline-block;
   pointer-events: none;
 }
+
+.hashtag {
+  background-color: #747bff;
+}

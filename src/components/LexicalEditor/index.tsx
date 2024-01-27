@@ -1,4 +1,4 @@
-import {useEffect, useId, useRef} from "react";
+import {useEffect, useId} from "react";
 import {useLexicalComposerContext} from "@lexical/react/LexicalComposerContext";
 import {ContentEditable} from "@lexical/react/LexicalContentEditable";
 import LexicalErrorBoundary from "@lexical/react/LexicalErrorBoundary";
@@ -12,6 +12,8 @@ import {
     KEY_TAB_COMMAND,
     OUTDENT_CONTENT_COMMAND,
 } from "lexical";
+import {HashtagPlugin} from '@lexical/react/LexicalHashtagPlugin';
+
 
 import DraggableBlockPlugin from "../../plugins/DraggableBlockPlugin";
 import {ToolbarPlugin} from "../../plugins/Toolbar";
@@ -25,6 +27,7 @@ import UndoButton from "../UndoButton";
 
 import s from "./styles.module.css";
 import {Highlighte} from "../Highlighte";
+import {StopWordPlugin} from "../../plugins/StopWordPlugin";
 
 const isEditable = true;
 
@@ -77,6 +80,8 @@ export const LexicalEditor = () => {
                     </Radio.Group>
                     <Divider className={s.divider} type="vertical"/>
                     <Highlighte/>
+                    <HashtagPlugin/>
+                    <StopWordPlugin/>
                 </ToolbarPlugin>
             </div>
             <div className={s.editorInner}>
